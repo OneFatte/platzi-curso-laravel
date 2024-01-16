@@ -21,3 +21,7 @@ Route::get('/contact', function () {
 Route::get('/about', function () {
     return 'Ruta about';
 });
+
+Route::get('/posts', function () {
+    return 'Ruta posts';
+});
