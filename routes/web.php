@@ -1,27 +1,24 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return 'Ruta home';
+    return view('home');
 });
 
 Route::get('/blog', function () {
     return 'Ruta blog';
 });
 
-Route::get('/post/{slug}', function ($slug) {
+Route::get('/blog/{slug}', function ($slug) {
     return $slug;
 });
 
-Route::get('/contact', function () {
-    return 'Ruta contact';
+Route::get('/buscar', function (Request $request) {
+    return $request->all();
 });
 
 Route::get('/about', function () {
     return 'Ruta about';
-});
-
-Route::get('/posts', function () {
-    return 'Ruta posts';
 });
