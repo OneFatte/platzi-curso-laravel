@@ -7,6 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Home</h1>
+    <h1>
+        Listado
+    </h1>
+
+    @foreach ($posts as $post)
+        <h3>
+            <a href="">{{ $post['title'] }}</a>
+        </h3>
+        <p>{{ $post['id']}}</p>
+    @endforeach
+
 </body>
 </html>
