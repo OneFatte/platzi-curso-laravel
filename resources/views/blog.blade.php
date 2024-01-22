@@ -11,6 +11,9 @@
             <p>{{ $post['id']}}</p>
             <a href="{{route('post', $post['slug'])}}">{{ $post['title'] }}</a>
         </h3>
+        <span>{{ $post->user['name'] }}</span>
+        <hr>
+        
         
     @endforeach
 
