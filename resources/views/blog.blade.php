@@ -7,10 +7,13 @@
 @section('content')
     <h1>Listado</h1>
     @foreach ($posts as $post)
-        <h3>
+        <h3 style="display: flex; align-items: center;gap: 10px">
+            <p>{{ $post['id']}}</p>
             <a href="{{route('post', $post['slug'])}}">{{ $post['title'] }}</a>
         </h3>
-        <p>{{ $post['id']}}</p>
+        
     @endforeach
+
+    {{ $posts->links() }}
     
 @endsection
